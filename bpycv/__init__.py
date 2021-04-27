@@ -6,7 +6,7 @@ bpycv: computer vision utils for Blender
 
 from .__info__ import __version__
 
-from .utils import ipython
+from .utils import ipython, objects_to_locals
 from .hdri_manager import HdriManager
 from .node_graph import activate_node_tree, Node
 from .exr_image_parser import parser_exr
@@ -37,6 +37,13 @@ from .scene_setting import (
     add_environment_box,
 )
 from .camera_utils import get_cams, set_cam_pose, set_cam_intrinsic, get_cam_intrinsic
-from .pose_utils import get_6d_pose
+from .pose_utils import (
+    T_bcam2cv,
+    homo_coord,
+    set_matrix_world,
+    get_pose_in_cam,
+    set_pose_in_cam,
+    get_6d_pose,
+)
 from .physic_utils import set_origin_and_record_old_v0
 from .domain_randomzition import texture_bsdf_dr, load_distractor
